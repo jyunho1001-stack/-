@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172554">
+<title>커리어온 | 취준생 커뮤니티</title>
+<style>
+:root{--navy:#172554;--blue:#3157d5;--sky:#edf3ff;--ink:#182033;--muted:#697386;--line:#e6eaf0;--bg:#f6f8fc;--white:#fff;--green:#16845b;--shadow:0 12px 35px #17255412}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.topbar{background:var(--navy);color:white;padding:15px max(22px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:23px;font-weight:850;letter-spacing:-1px}.brand span{color:#9db8ff}.top-actions{display:flex;gap:9px;align-items:center}.top-actions button{border-radius:9px;padding:9px 14px;font-weight:700}.ghost{background:#ffffff18;color:white}.primary{background:var(--blue);color:white}.outline{background:white;border:1px solid var(--line);color:var(--ink)}.wrap{max-width:1120px;margin:30px auto;padding:0 20px}.hero{background:linear-gradient(115deg,#1e3478,#4269df);color:white;padding:30px;border-radius:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:var(--shadow)}.hero h1{font-size:clamp(24px,4vw,36px);margin:0 0 9px;letter-spacing:-1.3px}.hero p{margin:0;color:#e0e8ff;line-height:1.6}.hero .hero-mark{font-size:58px;opacity:.9}.layout{display:grid;grid-template-columns:220px 1fr;gap:22px;margin-top:22px}.side,.panel,.post-card{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.side{padding:17px;height:max-content}.side h3{font-size:13px;color:var(--muted);margin:3px 8px 12px}.nav-btn{width:100%;text-align:left;padding:11px 12px;border-radius:9px;background:white;color:#465066;margin:2px 0;font-weight:650}.nav-btn.active,.nav-btn:hover{background:var(--sky);color:var(--blue)}.side-note{font-size:12px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding:14px 7px 0;margin-top:15px}.content{min-width:0}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.toolbar h2{font-size:21px;margin:0}.toolbar select{padding:9px;border:1px solid var(--line);border-radius:9px;background:white}.write{width:100%;text-align:left;padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:white;color:var(--muted);margin-bottom:14px}.write strong{color:var(--blue);margin-right:8px}.post-card{padding:18px;margin-bottom:13px}.post-meta{display:flex;gap:9px;align-items:center;color:var(--muted);font-size:12px}.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#e9efff;color:var(--blue);font-weight:800}.tag{font-size:11px;padding:4px 8px;border-radius:20px;background:#eef2ff;color:#405cc1;font-weight:700}.post-card h3{font-size:17px;margin:13px 0 7px}.post-card p{color:#505a6d;line-height:1.65;margin:0 0 14px;white-space:pre-wrap}.post-foot{display:flex;gap:15px;border-top:1px solid #f0f2f5;padding-top:11px}.post-foot button{background:none;color:var(--muted);font-size:13px;padding:2px}.empty{text-align:center;color:var(--muted);padding:45px 15px;background:white;border:1px dashed #ccd4e2;border-radius:14px}.modal-back{position:fixed;inset:0;background:#10182b88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-back.show{display:flex}.modal{width:min(460px,100%);background:white;border-radius:17px;padding:24px;box-shadow:0 25px 80px #0003}.modal h2{margin:0 0 8px}.modal .sub{color:var(--muted);font-size:13px;margin:0 0 18px}.field{display:block;margin:12px 0}.field span{display:block;font-size:13px;font-weight:700;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;border:1px solid #dce2ec;border-radius:9px;padding:11px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--blue)}.field textarea{min-height:125px;resize:vertical}.modal-actions{display:flex;gap:9px;margin-top:18px}.modal-actions button{flex:1;padding:11px;border-radius:9px;font-weight:750}.switch{text-align:center;color:var(--muted);font-size:13px;margin-top:15px}.switch button{background:none;color:var(--blue);font-weight:800}.notice{font-size:12px;color:#8b5a18;background:#fff7e8;border-radius:9px;padding:10px;line-height:1.55;margin-top:12px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#172554;color:white;padding:11px 17px;border-radius:10px;display:none;z-index:9;font-size:13px}.footer{text-align:center;color:#9aa3b2;font-size:12px;padding:30px 10px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.side{display:flex;overflow:auto;gap:5px;padding:9px}.side h3,.side-note{display:none}.nav-btn{white-space:nowrap;width:auto}.hero{padding:23px}.hero-mark{display:none}.wrap{margin-top:18px}.topbar{padding:13px 17px}.top-actions .ghost{display:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">커리어<span>온</span></div>
+  <div class="top-actions"><span id="user-label" style="font-size:13px;color:#dce5ff"></span><button class="ghost" id="login-open">로그인</button><button class="primary" id="signup-open">회원가입</button><button class="ghost" id="logout-btn" hidden>로그아웃</button></div>
+</header>
+<div class="wrap">
+  <section class="hero"><div><h1>취업 준비, 혼자 하지 마세요.</h1><p>고민을 나누고 정보를 공유하며 함께 성장하는 취준생 커뮤니티<br>오늘의 작은 연결이 내일의 커리어가 됩니다.</p></div><div class="hero-mark">✦</div></section>
+  <div class="layout">
+    <aside class="side">
+      <h3>커뮤니티</h3>
+      <button class="nav-btn active" data-category="전체">전체 게시판</button>
+      <button class="nav-btn" data-category="취업 고민">취업 고민</button>
+      <button class="nav-btn" data-category="자유 게시판">자유 게시판</button>
+      <button class="nav-btn" data-category="면접 후기">면접 후기</button>
+      <button class="nav-btn" data-category="자소서·이력서">자소서·이력서</button>
+      <button class="nav-btn" data-category="채용 정보">채용 정보</button>
+      <div class="side-note">서로를 존중하는 커뮤니티를 만들어 주세요.<br>개인정보·비방·허위 채용 정보는 금지됩니다.</div>
+    </aside>
+    <main class="content">
+      <div class="toolbar"><h2 id="board-title">전체 게시판</h2><select id="sort"><option value="new">최신순</option><option value="popular">공감순</option></select></div>
+      <button class="write" id="write-open"><strong>＋ 글쓰기</strong>취업 준비 이야기를 나눠보세요.</button>
+      <div id="posts"></div>
+    </main>
+  </div>
+  <div class="footer">CAREER ON · 함께 준비하고, 함께 성장하는 취준 커뮤니티</div>
+</div>
+<div class="modal-back" id="auth-modal"><section class="modal">
+  <h2 id="auth-title">회원가입</h2><p class="sub" id="auth-sub">커리어온의 회원이 되어보세요.</p>
+  <form id="auth-form">
+    <label class="field" id="name-field"><span>닉네임</span><input id="auth-name" maxlength="20" placeholder="커뮤니티에서 사용할 닉네임"></label>
+    <label class="field"><span>이메일</span><input id="auth-email" type="email" required placeholder="name@example.com"></label>
+    <label class="field"><span>비밀번호</span><input id="auth-password" type="password" minlength="6" required placeholder="6자 이상"></label>
+    <div class="notice">현재 버전은 브라우저 저장소를 사용하는 시제품입니다. 실제 서비스에서는 서버 인증과 비밀번호 해시 처리가 필요합니다.</div>
+    <div class="modal-actions"><button type="button" class="outline" data-close>닫기</button><button class="primary" type="submit" id="auth-submit">가입하기</button></div>
+  </form>
+  <div class="switch" id="auth-switch">이미 계정이 있나요? <button type="button" id="switch-auth">로그인</button></div>
+</section></div>
+<div class="modal-back" id="post-modal"><section class="modal">
+  <h2>새 게시글</h2><p class="sub">경험과 정보를 나누며 서로에게 힘이 되어주세요.</p>
+  <form id="post-form">
+    <label class="field"><span>게시판</span><select id="post-category"><option>취업 고민</option><option>자유 게시판</option><option>면접 후기</option><option>자소서·이력서</option><option>채용 정보</option></select></label>
+    <label class="field"><span>제목</span><input id="post-title" maxlength="80" required placeholder="제목을 입력하세요"></label>
+    <label class="field"><span>내용</span><textarea id="post-body" maxlength="3000" required placeholder="내용을 입력하세요."></textarea></label>
+    <div class="modal-actions"><button type="button" class="outline" data-close>취소</button><button class="primary" type="submit">게시하기</button></div>
+  </form>
+</section></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const read=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}};
+const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let users=read('career_users',[]), posts=read('career_posts',[
+{id:1,author:'커리어온 운영팀',category:'자유 게시판',title:'커리어온에 오신 걸 환영합니다!',body:'이곳은 취업을 준비하는 사람들이 경험과 정보를 나누는 공간입니다. 첫 면접 후기부터 작은 고민까지 편하게 나눠주세요.',date:new Date().toISOString(),likes:3,likedBy:[]},
+{id:2,author:'취준하는곰',category:'면접 후기',title:'첫 실무 면접을 보고 왔어요',body:'긴장했지만 준비했던 프로젝트 경험을 차근차근 설명하고 왔습니다. 결과를 기다리는 동안 다른 분들의 경험도 듣고 싶어요.',date:new Date(Date.now()-3600000).toISOString(),likes:5,likedBy:[]}
+]);
+let current=read('career_session',null), category='전체', authMode='signup';
+function toast(msg){const t=$('#toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2300)}
+function modal(id,show=true){$(id).classList.toggle('show',show)}
+function user(){return users.find(u=>u.email===current)}
+function updateHeader(){const u=user();$('#user-label').textContent=u?u.nickname+'님': '';$('#login-open').hidden=!!u;$('#signup-open').hidden=!!u;$('#logout-btn').hidden=!u}
+function openAuth(mode){authMode=mode;$('#auth-title').textContent=mode==='signup'?'회원가입':'로그인';$('#auth-sub').textContent=mode==='signup'?'커리어온의 회원이 되어보세요.':'가입한 계정으로 로그인하세요.';$('#name-field').hidden=mode!=='signup';$('#auth-name').required=mode==='signup';$('#auth-submit').textContent=mode==='signup'?'가입하기':'로그인';$('#auth-switch').innerHTML=mode==='signup'?'이미 계정이 있나요? <button type="button" id="switch-auth">로그인</button>':'아직 회원이 아니신가요? <button type="button" id="switch-auth">회원가입</button>';$('#switch-auth').onclick=()=>openAuth(mode==='signup'?'login':'signup');$('#auth-form').reset();modal('#auth-modal')}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){let list=posts.filter(p=>category==='전체'||p.category===category);if($('#sort').value==='popular')list.sort((a,b)=>b.likes-a.likes);else list.sort((a,b)=>new Date(b.date)-new Date(a.date));$('#board-title').textContent=category==='전체'?'전체 게시판':category;
+$('#posts').innerHTML=list.length?list.map(p=>`<article class="post-card"><div class="post-meta"><div class="avatar">${escapeHTML(p.author.slice(0,1))}</div><strong>${escapeHTML(p.author)}</strong><span class="tag">${escapeHTML(p.category)}</span><span>${new Date(p.date).toLocaleDateString('ko-KR')}</span></div><h3>${escapeHTML(p.title)}</h3><p>${escapeHTML(p.body)}</p><div class="post-foot"><button data-like="${p.id}">♡ 공감 ${p.likes}</button><button data-report="${p.id}">신고</button></div></article>`).join(''):'<div class="empty">아직 게시글이 없습니다.<br>첫 번째 이야기를 남겨보세요!</div>';
+document.querySelectorAll('[data-like]').forEach(b=>b.onclick=()=>like(Number(b.dataset.like)));document.querySelectorAll('[data-report]').forEach(b=>b.onclick=()=>{if(!current)return toast('신고하려면 로그인해 주세요.');toast('신고가 접수되었습니다. (시제품 기능)')})}
+function like(id){if(!current){toast('공감하려면 로그인해 주세요.');return}const p=posts.find(x=>x.id===id);if(p.likedBy.includes(current)){toast('이미 공감한 게시글입니다.');return}p.likes++;p.likedBy.push(current);save('career_posts',posts);render()}
+$('#auth-form').onsubmit=e=>{e.preventDefault();const email=$('#auth-email').value.trim().toLowerCase(),password=$('#auth-password').value;if(authMode==='signup'){if(users.some(u=>u.email===email))return toast('이미 가입된 이메일입니다.');users.push({email,password,nickname:$('#auth-name').value.trim()||'새내기'});save('career_users',users);current=email;toast('회원가입이 완료되었습니다!')}else{const u=users.find(u=>u.email===email&&u.password===password);if(!u)return toast('이메일 또는 비밀번호를 확인해 주세요.');current=email;toast('로그인되었습니다!')}save('career_session',current);modal('#auth-modal',false);updateHeader();render()};
+$('#login-open').onclick=()=>openAuth('login');$('#signup-open').onclick=()=>openAuth('signup');$('#logout-btn').onclick=()=>{current=null;localStorage.removeItem('career_session');updateHeader();render();toast('로그아웃되었습니다.')};
+$('#write-open').onclick=()=>{if(!current){toast('글쓰기는 회원 전용입니다. 먼저 로그인해 주세요.');openAuth('login');return}modal('#post-modal')};
+$('#post-form').onsubmit=e=>{e.preventDefault();const title=$('#post-title').value.trim(),body=$('#post-body').value.trim();if(!title||!body)return;posts.push({id:Date.now(),author:user().nickname,category:$('#post-category').value,title,body,date:new Date().toISOString(),likes:0,likedBy:[]});save('career_posts',posts);$('#post-form').reset();modal('#post-modal',false);category='전체';document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.category==='전체'));render();toast('게시글이 등록되었습니다!')};
+document.querySelectorAll('.nav-btn').forEach(b=>b.onclick=()=>{category=b.dataset.category;document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x===b));render()});$('#sort').onchange=render;document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>{modal('#auth-modal',false);modal('#post-modal',false)});document.querySelectorAll('.modal-back').forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove('show')});
+updateHeader();render();
+</script>
+</body>
+</html>
